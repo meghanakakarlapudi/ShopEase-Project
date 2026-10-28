@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ---------- Header ---------- -->
+    <header>
+
+        <a href="#home" class="logo">ShopEase</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products" onclick="showAllProducts()">Products</a>
+            <a href="#offers">Offers</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="search-btn" onclick="toggleSearch()">🔍</button>
+            <button class="cart-btn" onclick="openCart()">🛒 <span>0</span></button>
+        </div>
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button onclick="closeCart()">✕</button>
+    </div>
+
+    <div class="cart-content">
+        <p>Your cart is empty.</p>
+    </div>
+</div>
+    </header>
+    <div class="search-box" id="searchBox">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button onclick="searchProducts()">Search</button>
+</div>
+<!-- ---------- Hero Section ---------- -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="hero-label">WELCOME TO SHOPEASE</p>
+
+        <h1>
+            Find Your Style,<br>
+            Make It Yours.
+        </h1>
+
+        <p>
+            Discover fashion, accessories and everyday essentials
+            picked just for you.
+        </p>
+
+        <a href="#products" class="hero-btn">Shop Now</a>
+
+    </div>
+
+</section>
+<!-- ---------- Categories Section ---------- -->
+
+<!-- ---------- Categories Section ---------- -->
+
+<section class="categories-section">
+
+    <div class="section-heading">
+        <p>SHOP BY CATEGORY</p>
+        <h2>Find What You Love</h2>
+        <span>Explore our collection of everyday favourites.</span>
+    </div>
+
+    <div class="categories-container">
+
+        <div class="category-card" onclick="showCategory('clothing')">
+            <img src="images/clothing.avif" alt="Clothing">
+            <h3>Clothing</h3>
+            <span>Explore Collection</span>
+        </div>
+
+        <div class="category-card" onclick="showCategory('footwear')">
+            <img src="images/foot wear.jpg" alt="footwear">
+            <h3>Footwear</h3>   
+            <span>Explore Collection</span>
+        </div>
+
+        <div class="category-card" onclick="showCategory('bags')">
+            <img src="images/bags.webp" alt="Bags">
+            <h3>Bags</h3>
+            <span>Explore Collection</span>
+        </div>
+
+        <div class="category-card" onclick="showCategory('accessories')">
+            <img src="images/accesories.jpg" alt="Accessories">
+            <h3>Accessories</h3>
+            <span>Explore Collection</span>
+        </div>
+
+    </div>
+
+</section>
+<!-- ---------- Products Section ---------- -->
+
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+        <p>OUR PRODUCTS</p>
+        <h2>Explore Our Collection</h2>
+        <span>Find something perfect for every style.</span>
+    </div>
+
+    <div class="products-container">
+<div class="product-card" data-category="clothing">
+    <img src="images/shirt.webp" alt="Men's Shirt">
+    <div class="product-info">
+        <h3>Men's Shirt</h3>
+        <p>Classic and comfortable shirt for everyday style.</p>
+        <div class="product-bottom">
+            <strong>₹1,099</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="clothing">
+    <img src="images/Baggy_jeans.webp" alt="Men's Pant">
+    <div class="product-info">
+        <h3>Men's Pant</h3>
+        <p>Comfortable fit with a clean and modern look.</p>
+        <div class="product-bottom">
+            <strong>₹1,599</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="clothing">
+    <img src="images/T-shirt.webp" alt="Men's T-Shirt">
+    <div class="product-info">
+        <h3>Men's T-Shirt</h3>
+        <p>Simple everyday T-shirt with a relaxed fit.</p>
+        <div class="product-bottom">
+            <strong>₹599</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="clothing">
+    <img src="images/peplum_top.jpg" alt="Women's Peplum Top">
+    <div class="product-info">
+        <h3>Women's Peplum Top</h3>
+        <p>Stylish peplum top for a beautiful everyday look.</p>
+        <div class="product-bottom">
+            <strong>₹499</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="clothing">
+    <img src="images/baggy pant women.webp" alt="Women's Baggy Pant">
+    <div class="product-info">
+        <h3>Women's Baggy Pant</h3>
+        <p>Trendy relaxed-fit pants for effortless comfort.</p>
+        <div class="product-bottom">
+            <strong>₹1,099</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="clothing">
+    <img src="images/kurta.jpg" alt="Women's Kurta">
+    <div class="product-info">
+        <h3>Women's Kurta</h3>
+        <p>Elegant and comfortable kurta for everyday wear.</p>
+        <div class="product-bottom">
+            <strong>₹799</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+    <!-- Footwear -->
+
+<div class="product-card" data-category="footwear">
+    <img src="images/mens slippers.webp" alt="Men's Slippers">
+    <div class="product-info">
+        <h3>Men's Slippers</h3>
+        <p>Comfortable everyday slippers with a simple style.</p>
+        <div class="product-bottom">
+            <strong>₹499</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="footwear">
+    <img src="images/mens snadals.webp" alt="Men's Sandals">
+    <div class="product-info">
+        <h3>Men's Sandals</h3>
+        <p>Comfortable sandals made for everyday wear.</p>
+        <div class="product-bottom">
+            <strong>1,099</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="footwear">
+    <img src="images/shoes 2.webp" alt="Men's Sneakers">
+    <div class="product-info">
+        <h3>Men's Sneakers</h3>
+        <p>Stylish sneakers for a comfortable casual look.</p>
+        <div class="product-bottom">
+            <strong>₹1,499</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="footwear">
+    <img src="images/women sandal.jpg" alt="Women's Sandals">
+    <div class="product-info">
+        <h3>Women's Sandals</h3>
+        <p>Elegant and comfortable sandals for everyday style.</p>
+        <div class="product-bottom">
+            <strong>₹1,099</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="footwear">
+    <img src="images/women flats.webp" alt="Women's Flats">
+    <div class="product-info">
+        <h3>Women's Flats</h3>
+        <p>Simple and stylish flats designed for everyday comfort.</p>
+        <div class="product-bottom">
+            <strong>₹599</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>  
+</div>
+
+<div class="product-card" data-category="footwear">
+    <img src="images/shoes 2 women.jpg" alt="Women's Shoes">
+    <div class="product-info">
+        <h3>Women's Shoes</h3>
+        <p>Trendy shoes that add a stylish touch to every outfit.</p>
+        <div class="product-bottom">
+            <strong>₹1,299</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<!-- Bags -->
+
+<!-- Bags -->
+
+<div class="product-card" data-category="bags">
+    <img src="images/classic handbag.jpeg" alt="Classic Handbag">
+    <div class="product-info">
+        <h3>Classic Handbag</h3>
+        <p>Elegant handbag for everyday style and convenience.</p>
+        <div class="product-bottom">
+            <strong>₹1,099</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="bags">
+    <img src="images/elegant handbag.avif" alt="Elegant Handbag">
+    <div class="product-info">
+        <h3>Elegant Handbag</h3>
+        <p>Stylish handbag with a sophisticated everyday look.</p>
+        <div class="product-bottom">
+            <strong>₹1,499</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="bags">
+    <img src="images/cute handbag women.jpg" alt="Cute Handbag">
+    <div class="product-info">
+        <h3>Cute Handbag</h3>
+        <p>A versatile handbag made for your everyday essentials.</p>
+        <div class="product-bottom">
+            <strong>₹1,299</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="bags">
+    <img src="images/women tote bag.webp" alt="Women Tote Bag">
+    <div class="product-info">
+        <h3>Women Tote Bag</h3>
+        <p>Comfortable and spacious bag for everyday college use.</p>
+        <div class="product-bottom">
+            <strong>₹599</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="bags">
+    <img src="images/college bag 2.webp" alt="Cute College Bag">
+    <div class="product-info">
+        <h3>Cute College Bag</h3>
+        <p>Modern and stylish bag designed for college life.</p>
+        <div class="product-bottom">
+            <strong>₹799</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="bags">
+    <img src="images/college bag.jpg" alt="Trendy College Bag">
+    <div class="product-info">
+        <h3>Trendy College Bag</h3>
+        <p>Practical and spacious bag for everyday essentials.</p>
+        <div class="product-bottom">
+            <strong>₹849</strong>   
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<!-- Accessories -->
+
+<div class="product-card" data-category="accessories">
+    <img src="images/mens wallet.avif" alt="Men's Wallet">
+    <div class="product-info">
+        <h3>Men's Wallet</h3>
+        <p>Classic wallet with a simple and practical design.</p>
+        <div class="product-bottom">
+            <strong>₹599</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="accessories">
+    <img src="images/watch men.webp" alt="Men's Watch">
+    <div class="product-info">
+        <h3>Men's Watch</h3>
+        <p>Stylish watch designed for everyday wear.</p>
+        <div class="product-bottom">
+            <strong>₹1,299</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="accessories">
+    <img src="images/sunglasses.jpeg" alt="Men's Sunglasses">
+    <div class="product-info">
+        <h3>Men's Sunglasses</h3>
+        <p>Classic sunglasses for a stylish everyday look.</p>
+        <div class="product-bottom">
+            <strong>₹799</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="accessories">
+    <img src="images/wallet women.jpeg" alt="Women's Wallet">
+    <div class="product-info">
+        <h3>Women's Wallet</h3>
+        <p>Elegant wallet with enough space for everyday essentials.</p>
+        <div class="product-bottom">
+            <strong>₹699</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="accessories">
+    <img src="images/watch women.jpg" alt="Women's Watch">
+    <div class="product-info">
+        <h3>Women's Watch</h3>
+        <p>Elegant watch that adds a stylish touch to any outfit.</p>
+        <div class="product-bottom">
+            <strong>₹1,199</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="product-card" data-category="accessories">
+    <img src="images/chain women.jpeg" alt="Women's Chain">
+    <div class="product-info">
+        <h3>Women's Chain</h3>
+        <p>Simple and elegant chain for everyday styling.</p>
+        <div class="product-bottom">
+            <strong>₹499</strong>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+<!-- Offers Section -->
+
+<section class="offers-section" id="offers">
+
+    <div class="section-heading">
+        <p>SHOP & SAVE</p>
+        <h2>Special Offers</h2>
+        <span>Enjoy great deals on your everyday favourites.</span>
+    </div>
+
+    <div class="offers-container">
+
+        <div class="offer-card">
+            <h3>20% OFF</h3>
+            <p>On selected clothing styles.</p>
+            <span>Use code: STYLE20</span>
+            <a href="#products" onclick="showCategory('clothing')">Shop Now</a>
+        </div>
+
+        <div class="offer-card">
+            <h3>15% OFF</h3>
+            <p>On selected footwear collections.</p>
+            <span>Use code: STEP15</span>
+            <a href="#products" onclick="showCategory('footwear')">Shop Now</a>
+        </div>
+
+        <div class="offer-card">
+            <h3>10% OFF</h3>
+            <p>On selected bags.</p>
+            <span>Use code: SAVE10</span>
+            <a href="#products" onclick="showCategory('bags')">Shop Now</a>
+        </div>
+
+    </div>
+
+</section>
+<!-- About Section -->
+
+<section class="about-section" id="about">
+
+    <div class="about-content">
+
+        <div class="about-text">
+            <p class="about-label">ABOUT SHOPEASE</p>
+
+            <h2>Shopping Made Simple</h2>
+
+            <p>
+                ShopEase is an online shopping platform created to make
+                everyday shopping simple, convenient and enjoyable.
+            </p>
+
+            <p>
+                From clothing and footwear to bags and accessories,
+                we bring together stylish products for your everyday needs.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="images/shopping image.webp" alt="Shopping">
+        </div>
+
+    </div>
+
+</section>
+<!-- Contact Section -->
+
+<section class="contact-section" id="contact">
+
+    <div class="section-heading">
+        <p>CONTACT US</p>
+        <h2>We're Here to Help</h2>
+        <span>Get in touch with ShopEase.</span>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <div class="contact-icon">✉</div>
+            <h3>Email Us</h3>
+            <p>project@shopease.com</p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">☎</div>
+            <h3>Call Us</h3>
+            <p>+91 6281754259</p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">⌖</div>
+            <h3>Visit Us</h3>
+            <p>Hyderabad, India</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- Footer -->
+
+<footer>
+
+    <div class="footer-content">
+        <h2>ShopEase</h2>
+        <p>Simple shopping. Everyday essentials.</p>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 ShopEase. All rights reserved.</p>
+    </div>
+
+</footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
